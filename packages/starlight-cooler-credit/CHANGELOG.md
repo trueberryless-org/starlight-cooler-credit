@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- [`517714a`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/517714af1398266f33a1208dc73477b38fee49a0) Thanks [@trueberryless](https://github.com/trueberryless)! - Add Chinese language translation
+
+## 0.1.7
+
+### Patch Changes
+
 - [#20](https://github.com/trueberryless-org/starlight-cooler-credit/pull/20) [`9135a0e`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/9135a0e4db720ddbe8f77b564d5f2754e382e844) Thanks [@Nin3lee](https://github.com/Nin3lee)! - Add Chinese language translation.
 
 ## 0.1.6
