@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: starlight-cooler-credit
-          image: "trueberryless/starlight-cooler-credit:0.1.10"
+          image: "trueberryless/starlight-cooler-credit"
           imagePullPolicy: Always
