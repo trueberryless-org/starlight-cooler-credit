@@ -1,6 +1,6 @@
 {
   "name": "starlight-cooler-credit",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Add a nice credit to Starlight or Astro at the bottom of Table of Contents.",
   "keywords": [
     "starlight",

@@ -1,5 +1,21 @@
 # starlight-cooler-credit
 
+## 0.2.0
+
+### Minor Changes
+
+- [#41](https://github.com/trueberryless-org/starlight-cooler-credit/pull/41) [`30bee54`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/30bee54b86c1c8ccd30413e3d8c4b53a6af0e370) Thanks [@trueberryless](https://github.com/trueberryless)! - Adds support for Astro v5, drops support for Astro v4.
+
+  ⚠️ **BREAKING CHANGE:** The minimum supported version of Starlight is now `0.30.0`.
+
+  Please follow the [upgrade guide](https://github.com/withastro/starlight/releases/tag/%40astrojs/starlight%400.30.0) to update your project.
+
+  Note that the [`legacy.collections` flag](https://docs.astro.build/en/reference/legacy-flags/#collections) is not supported by this plugin and you should update your collections to use Astro's new Content Layer API.
+
+### Patch Changes
+
+- [#43](https://github.com/trueberryless-org/starlight-cooler-credit/pull/43) [`2b47021`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/2b47021d50251b18592a692240066e0d4cf3418e) Thanks [@trueberryless](https://github.com/trueberryless)! - Make Image in Cooler Credit Component optional
+
 ## 0.1.9
 
 ### Patch Changes
