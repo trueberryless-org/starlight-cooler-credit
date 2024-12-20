@@ -1,5 +1,11 @@
 # starlight-cooler-credit
 
+## 0.2.1
+
+### Patch Changes
+
+- [`9e2f769`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/9e2f7698d3079bf36e1e7cc811e0ed9f032f401d) Thanks [@trueberryless](https://github.com/trueberryless)! - Bump patch version because 0.2.0 was published before and although unpublished within 72h there is still an entry in the time object of the registry
+
 ## 0.2.0
 
 ### Minor Changes
