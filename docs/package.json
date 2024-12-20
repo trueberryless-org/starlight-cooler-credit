@@ -28,9 +28,9 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.29.0",
+    "@astrojs/starlight": "^0.30.3",
     "@trueberryless-org/starlight-plugins-docs-components": "^0.2.2",
-    "astro": "^4.16.10",
+    "astro": "^5.1.0",
     "sharp": "^0.33.5",
     "starlight-contributor-list": "^0.1.0",
     "starlight-cooler-credit": "workspace:*",
