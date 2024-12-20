@@ -1,5 +1,18 @@
 # starlight-cooler-credit-docs
 
+## 0.2.0
+
+### Minor Changes
+
+- [#41](https://github.com/trueberryless-org/starlight-cooler-credit/pull/41) [`30bee54`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/30bee54b86c1c8ccd30413e3d8c4b53a6af0e370) Thanks [@trueberryless](https://github.com/trueberryless)! - Update to Astro 5 and Starlight 0.30 + Starlight Cooler Credit Dependency
+
+### Patch Changes
+
+- [#43](https://github.com/trueberryless-org/starlight-cooler-credit/pull/43) [`2b47021`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/2b47021d50251b18592a692240066e0d4cf3418e) Thanks [@trueberryless](https://github.com/trueberryless)! - Update documenation regarding `showImage` property
+
+- Updated dependencies [[`30bee54`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/30bee54b86c1c8ccd30413e3d8c4b53a6af0e370), [`2b47021`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/2b47021d50251b18592a692240066e0d4cf3418e)]:
+  - starlight-cooler-credit@0.2.0
+
 ## 0.1.10
 
 ### Patch Changes
