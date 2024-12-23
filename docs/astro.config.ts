@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import starlightLinksValidator from "starlight-links-validator";
 import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
+import starlightPluginShowLatestVersion from "starlight-plugin-show-latest-version";
 
 export default defineConfig({
   integrations: [
@@ -44,6 +45,9 @@ export default defineConfig({
               },
             ],
           },
+        }),
+        starlightPluginShowLatestVersion({
+          repo: "trueberryless-org/starlight-cooler-credit",
         }),
       ],
       sidebar: [
