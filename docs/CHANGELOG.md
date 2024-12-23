@@ -1,5 +1,11 @@
 # starlight-cooler-credit-docs
 
+## 0.2.2
+
+### Patch Changes
+
+- [#47](https://github.com/trueberryless-org/starlight-cooler-credit/pull/47) [`e2ee0ed`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/e2ee0edaff5c980f23d81876381fcf5d54861a64) Thanks [@trueberryless](https://github.com/trueberryless)! - Add Starlight Plugin Show Latest Version
+
 ## 0.2.1
 
 ### Patch Changes
