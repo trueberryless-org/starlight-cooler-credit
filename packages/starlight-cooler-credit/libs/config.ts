@@ -14,6 +14,7 @@ const configSchema = z
       ])
       .default("Starlight"),
     showImage: z.boolean().optional().default(true),
+    customImage: z.string().optional(),
   })
   .default({});
 
