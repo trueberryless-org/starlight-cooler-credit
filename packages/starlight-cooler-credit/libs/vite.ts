@@ -7,7 +7,15 @@ export function vitePluginStarlightCoolerCreditConfig(
 ): VitePlugin {
   const moduleId = "virtual:starlight-cooler-credit-config";
   const resolvedModuleId = `\0${moduleId}`;
-  const moduleContent = `export default ${JSON.stringify(config)}`;
+  const moduleContent = `export default {
+    credit: ${JSON.stringify(config.credit)},
+    showImage: ${JSON.stringify(config.showImage)},
+    ${
+      config.customImage
+        ? `customImage: await import(${JSON.stringify(config.customImage)})`
+        : `customImage: undefined`
+    }
+  }`;
 
   return {
     name: "vite-plugin-starlight-cooler-credit",

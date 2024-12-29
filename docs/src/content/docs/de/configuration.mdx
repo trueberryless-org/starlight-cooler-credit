@@ -91,3 +91,21 @@ Dies sind die englischen Standardeinstellungen der vorhandenen Zeichenketten, mi
 **Standard:** `true`
 
 Mit der Option `showImage` kannst du festlegen, ob das Bild in der Komponente Cooler Credit angezeigt werden soll oder nicht. Wenn du `false` einstellst, wird das Bild nicht angezeigt.
+
+### `customImage`
+
+**Typ:** `string`
+
+Mit der Option `customImage` kannst du eine eigene Bild-URL für die Cooler Credit-Komponente angeben. Wenn du sie angibst, wird das Standardbild durch das benutzerdefinierte Bild ersetzt. Die Konfigurationsoption [`showImage`](#showimage) muss auf `true` gesetzt werden, damit das Bild angezeigt wird.
+
+Diese Option akzeptiert einen relativen Pfad zu einem Bild in deinem Projekt:
+
+```ts
+starlightCoolerCredit({
+  customImage: "./src/assets/rainsberger.ca.webp",
+}),
+```
+
+:::note
+Es ist nicht möglich, eine externe Bild-URL anzugeben.
+:::

@@ -91,3 +91,21 @@ These are the English defaults of the existing strings Starlight Cooler Credit s
 **Default:** `true`
 
 The `showImage` option allows you to configure whether the image in the Cooler Credit component should be displayed or not. If set to `false`, the image will not be displayed.
+
+### `customImage`
+
+**Type:** `string`
+
+The `customImage` option allows you to provide a custom image URL for the Cooler Credit component. If provided, the default image will be replaced with the custom image. The configuration option [`showImage`](#showimage) must be set to `true` for the image to be displayed.
+
+This option accepts a relative path to an image in your project:
+
+```ts
+starlightCoolerCredit({
+  customImage: "./src/assets/rainsberger.ca.webp",
+}),
+```
+
+:::note
+It is not possible to provide an external image URL.
+:::

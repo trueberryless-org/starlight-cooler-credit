@@ -7,6 +7,8 @@ import getCreditText from '../libs/util';
 const translate = (key: string) => Astro.locals.t(key);
 
 const locale = Astro.currentLocale
+
+const src = config.customImage ? config.customImage.default : HoustonOmg;
 ---
 
 <aside class="not-content">
@@ -21,8 +23,8 @@ const locale = Astro.currentLocale
         }
       </div>
       {config.showImage && 
-        <div>
-          <Image src={HoustonOmg} alt="" width="180" />
+        <div>          
+          <Image {src} alt="" width="180" />
         </div>
       }
 		</div>
