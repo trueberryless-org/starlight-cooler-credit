@@ -1,5 +1,14 @@
 # starlight-cooler-credit-docs
 
+## 0.2.3
+
+### Patch Changes
+
+- [`7f5417d`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/7f5417d96aacdc6d35b69397f70c95bb6f6a2eb0) Thanks [@trueberryless](https://github.com/trueberryless)! - Document new configuration option `customImage`
+
+- Updated dependencies [[`45b5eb8`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/45b5eb85c5bc3be4899cbd907acabeb6f20bfd3c)]:
+  - starlight-cooler-credit@0.2.2
+
 ## 0.2.2
 
 ### Patch Changes

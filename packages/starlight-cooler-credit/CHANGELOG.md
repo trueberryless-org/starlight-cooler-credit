@@ -1,5 +1,21 @@
 # starlight-cooler-credit
 
+## 0.2.2
+
+### Patch Changes
+
+- [#50](https://github.com/trueberryless-org/starlight-cooler-credit/pull/50) [`45b5eb8`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/45b5eb85c5bc3be4899cbd907acabeb6f20bfd3c) Thanks [@trueberryless](https://github.com/trueberryless)! - Add support for custom image.
+
+  You can hereby specify another image which will be used inside the component by setting the `customImage` configuration like this:
+
+  ```
+  plugins: [
+    starlightCoolerCredit({
+      customImage: "./src/assets/rainsberger.ca.webp",
+    })
+  ]
+  ```
+
 ## 0.2.1
 
 ### Patch Changes
