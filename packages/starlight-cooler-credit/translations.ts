@@ -87,4 +87,14 @@ export const Translations = {
     "starlightCoolerCredit.starlight-blog.description":
       "هل تريد ان تطور Starlight blog الخاص بك؟ ←",
   },
+  es: {
+    "starlightCoolerCredit.starlight.description":
+      "¿Quieres construir tu propia documentación? →",
+    "starlightCoolerCredit.astro.title": "Construido con Astro",
+    "starlightCoolerCredit.astro.description":
+      "¿Quieres construir tu propio sitio web estático? →",
+    "starlightCoolerCredit.starlight-blog.title": "Construido con Starlight Blog",
+    "starlightCoolerCredit.starlight-blog.description":
+      "¿Quieres construir tu propio Starlight blog? →",
+  },
 };
