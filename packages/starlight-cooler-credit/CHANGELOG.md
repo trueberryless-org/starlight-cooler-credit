@@ -1,5 +1,11 @@
 # starlight-cooler-credit
 
+## 0.2.3
+
+### Patch Changes
+
+- [#55](https://github.com/trueberryless-org/starlight-cooler-credit/pull/55) [`ee37459`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/ee374593e459b728e34503cc5ae1a6c177a4396f) Thanks [@PanConDev](https://github.com/PanConDev)! - Add Spanish language translation
+
 ## 0.2.2
 
 ### Patch Changes
