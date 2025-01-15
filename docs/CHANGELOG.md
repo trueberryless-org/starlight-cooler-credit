@@ -1,5 +1,11 @@
 # starlight-cooler-credit-docs
 
+## 0.2.5
+
+### Patch Changes
+
+- [`8aab573`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/8aab573111fd1032a5403c1b8c287e52dc1a6503) Thanks [@trueberryless](https://github.com/trueberryless)! - Fix import statements in configuration examples
+
 ## 0.2.4
 
 ### Patch Changes
