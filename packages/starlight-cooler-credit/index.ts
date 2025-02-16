@@ -36,7 +36,7 @@ export default function starlightCoolerCredit(
             ...overrideStarlightComponent(
               starlightConfig.components,
               logger,
-              "PageSidebar"
+              "TableOfContents"
             ),
           },
         });

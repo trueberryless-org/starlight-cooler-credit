@@ -22,7 +22,7 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
-    "./overrides/PageSidebar.astro": "./overrides/PageSidebar.astro",
+    "./overrides/TableOfContents.astro": "./overrides/TableOfContents.astro",
     "./package.json": "./package.json"
   },
   "dependencies": {

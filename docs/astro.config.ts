@@ -56,7 +56,11 @@ export default defineConfig({
           translations: {
             de: "Loslegen",
           },
-          items: [{ slug: "getting-started" }, { slug: "configuration" }],
+          items: [
+            { slug: "getting-started" },
+            { slug: "configuration" },
+            { slug: "many-headings" },
+          ],
         },
       ],
       social: {
