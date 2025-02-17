@@ -1,17 +1,16 @@
 ---
-import Card from '../Card.astro';
+import BottomTableOfContentWrapper from '../BottomTableOfContentWrapper.astro';
+import CreditReferenceCard from '../CreditReferenceCard.astro';
+
+const { toc } = Astro.locals.starlightRoute;
 ---
 
-<Card />
-
-<style is:global>
-  .right-sidebar-panel {
-    height: 100%;
-  }
-  .sl-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-</style>
+{
+	toc && (
+		<>
+			<BottomTableOfContentWrapper>
+				<CreditReferenceCard />
+			</BottomTableOfContentWrapper>
+		</>
+	)
+}

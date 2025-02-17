@@ -15,6 +15,11 @@ const configSchema = z
       .default("Starlight"),
     showImage: z.boolean().optional().default(true),
     customImage: z.string().optional(),
+    customImageAlt: z.string().optional(),
+  })
+  .refine((data) => !(data.customImage && !data.customImageAlt), {
+    message: "customImageAlt is required when customImage is provided.",
+    path: ["customImageAlt"],
   })
   .default({});
 

@@ -94,9 +94,10 @@ The `showImage` option allows you to configure whether the image in the Cooler C
 
 ### `customImage`
 
-**Type:** `string`
+**Type:** `string`  
+**Default:** An image of Houston showing interest.
 
-The `customImage` option allows you to provide a custom image URL for the Cooler Credit component. If provided, the default image will be replaced with the custom image. The configuration option [`showImage`](#showimage) must be set to `true` for the image to be displayed.
+The `customImage` option allows you to provide a custom image path for the Cooler Credit component. If provided, the default image will be replaced with the custom image. The configuration option [`showImage`](#showimage) must be set to `true` for the image to be displayed.
 
 This option accepts a relative path to an image in your project:
 
@@ -108,4 +109,17 @@ starlightCoolerCredit({
 
 :::note
 It is not possible to provide an external image URL.
+:::
+
+### `customImageAlt`
+
+**Type:** `string`  
+**Default:** `"A face with two large white eyes and a small round mouth, creating a 'WOW' expression. This character, named Houston, sticks out at the bottom of the card to show interest."`
+
+Mit der Option `customImageAlt` kannst du einen alternativen Text für das Bild in der Cooler Credit Komponente angeben. Wenn du ihn nicht angibst, wird der Standard-Alt-Text verwendet.
+
+Der alternative Text kann nur für eine Sprache eingestellt werden.
+
+:::note
+Diese Option ist erforderlich, wenn [`customImage`](#customimage) angegeben wird.
 :::

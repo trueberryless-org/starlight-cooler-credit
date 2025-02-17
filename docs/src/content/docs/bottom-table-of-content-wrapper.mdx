@@ -1,0 +1,45 @@
+---
+title: Bottom Table of Content Wrapper
+---
+
+If you want to display something entirely different at the bottom of the Table of Content, you can use the `BottomTableOfContentWrapper` component. This component is a wrapper around the default Table of Content and allows you to display additional content below the default Table of Content.
+
+This means that you can exchange the card component with whatever you want.
+
+import { Steps } from '@astrojs/starlight/components';
+
+Here is an example:
+
+<Steps>
+
+1. Create the component `TableOfContents.astro`:
+
+    ```astro title="src/components/TableOfContents.astro"
+    ---
+    import Default from '@astrojs/starlight/components/TableOfContents.astro'
+    import BottomTableOfContentWrapper from 'starlight-cooler-credit/components/BottomTableOfContentWrapper.astro'
+    ---
+
+    <Default><slot /></Default>
+    <BottomTableOfContentWrapper>
+      <p>Hello, Astronaut! 👨‍🚀</p>
+    </BottomTableOfContentWrapper>
+    ```
+
+2. Override the default Table of Content in your `astro.config.mjs`:
+
+    ```js title="astro.config.mjs" {5}
+    export default defineConfig({
+      integrations: [
+        starlight({
+          components: {
+            TableOfContents: "./src/components/TableOfContents.astro",
+          },
+        }),
+      ],
+    });
+    ```
+
+</Steps>
+
+You can see the result in the right Table of Content ➡️

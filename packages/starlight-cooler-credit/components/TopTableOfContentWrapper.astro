@@ -1,0 +1,19 @@
+---
+const { toc } = Astro.locals.starlightRoute;
+---
+
+{
+	toc && (
+		<>
+			<div class="starlight-cooler-credit-bottom-table-of-content-wrapper-container">
+				<slot />
+			</div>
+		</>
+	)
+}
+
+<style>
+	.starlight-cooler-credit-bottom-table-of-content-wrapper-container {
+		margin-bottom: 1rem;
+	}
+</style>

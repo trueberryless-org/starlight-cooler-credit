@@ -1,0 +1,35 @@
+---
+import Default from '@astrojs/starlight/components/TableOfContents.astro'
+import BottomTableOfContentWrapper from 'starlight-cooler-credit/components/BottomTableOfContentWrapper.astro'
+import TopTableOfContentWrapper from 'starlight-cooler-credit/components/TopTableOfContentWrapper.astro'
+import StarlightCoolerCreditTableOfContents from 'starlight-cooler-credit/components/TableOfContents.astro'
+
+const currentPath = Astro.url.pathname;
+const showBottomTable = currentPath.includes('bottom-table-of-content-wrapper');
+const showTopTable = currentPath.includes('top-table-of-content-wrapper');
+---
+
+{showBottomTable ? (
+  <Default><slot /></Default>
+  <BottomTableOfContentWrapper>
+    <p>Hello, Astronaut! 👨‍🚀</p>
+  </BottomTableOfContentWrapper>
+) : showTopTable ? (
+  <TopTableOfContentWrapper>
+    <p>✨ Reaching for the stars! ✨</p>
+  </TopTableOfContentWrapper>
+  <Default><slot /></Default>
+
+  <style is:global>
+    .right-sidebar-panel {
+      min-height: 100%;
+      display: block;
+    }
+    .sl-container {
+      display: block;
+    }
+  </style>
+) : (
+  <Default><slot /></Default>
+  <StarlightCoolerCreditTableOfContents />
+)}

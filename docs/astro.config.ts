@@ -5,6 +5,8 @@ import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
 import starlightPluginShowLatestVersion from "starlight-plugin-show-latest-version";
 
+import node from "@astrojs/node";
+
 export default defineConfig({
   integrations: [
     starlight({
@@ -20,16 +22,6 @@ export default defineConfig({
       editLink: {
         baseUrl:
           "https://github.com/trueberryless-org/starlight-cooler-credit/edit/main/docs/",
-      },
-      locales: {
-        root: {
-          lang: "en",
-          label: "English",
-        },
-        de: {
-          lang: "de",
-          label: "Deutsch",
-        },
       },
       plugins: [
         starlightLinksValidator(),
@@ -47,9 +39,16 @@ export default defineConfig({
           },
         }),
         starlightPluginShowLatestVersion({
-          repo: "trueberryless-org/starlight-cooler-credit",
+          source: {
+            type: "npm",
+            slug: "starlight-cooler-credit",
+          },
+          showInSiteTitle: "deferred",
         }),
       ],
+      components: {
+        TableOfContents: "./src/components/TableOfContents.astro",
+      },
       sidebar: [
         {
           label: "Start Here",
@@ -62,10 +61,21 @@ export default defineConfig({
             { slug: "many-headings" },
           ],
         },
+        {
+          label: "Components",
+          items: [
+            { slug: "credit-reference-card" },
+            { slug: "bottom-table-of-content-wrapper" },
+            { slug: "top-table-of-content-wrapper" },
+          ],
+        },
       ],
       social: {
         github: "https://github.com/trueberryless-org/starlight-cooler-credit",
       },
     }),
   ],
+  adapter: node({
+    mode: "standalone",
+  }),
 });

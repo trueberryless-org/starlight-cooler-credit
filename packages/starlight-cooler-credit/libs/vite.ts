@@ -14,7 +14,8 @@ export function vitePluginStarlightCoolerCreditConfig(
       config.customImage
         ? `customImage: await import(${JSON.stringify(config.customImage)})`
         : `customImage: undefined`
-    }
+    },
+    customImageAlt: ${JSON.stringify(config.customImageAlt)},
   }`;
 
   return {

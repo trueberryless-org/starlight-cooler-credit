@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import HoustonOmg from '../assets/houston_omg.png';
+import config from "virtual:starlight-cooler-credit-config";
+import getCreditText from '../libs/util';
+
+const { class: className, ...rest } = Astro.props;
+
+const translate = (key: string) => Astro.locals.t(key);
+
+const locale = Astro.currentLocale
+
+const houstenOmgAlt = "A face with two large white eyes and a small round mouth, creating a 'WOW' expression. This character, named Houston, sticks out at the bottom of the card to show interest."
+
+const src = config.customImage ? config.customImage.default : HoustonOmg;
+const alt = config.customImageAlt ? config.customImageAlt : houstenOmgAlt;
+---
+
+<aside class={`not-content starlight-cooler-credit-aside ${className ?? ''}`} {...rest}>
+	<a href={getCreditText(config, "href", translate, locale)}>
+		<h2>{getCreditText(config, "title", translate, locale)}</h2>
+		<div>
+			<div>
+				{getCreditText(config, "description", translate, locale) && 
+					<p>
+						{getCreditText(config, "description", translate, locale)} 
+					</p>
+				}
+			</div>
+			{config.showImage && 
+				<div>
+					<Image {src} {alt} width="180" />
+				</div>
+			}
+		</div>
+	</a>
+</aside>
+
+<style>
+	.starlight-cooler-credit-aside {
+		position: relative;
+		background-color: var(--sl-color-gray-6);
+		padding: 1rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--sl-color-text-accent);
+		box-shadow: var(--sl-shadow-md);
+		overflow-y: hidden;
+	}
+  .starlight-cooler-credit-aside a:link{
+    text-decoration: none !important;
+  }
+	.starlight-cooler-credit-aside a::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+	.starlight-cooler-credit-aside > a > div {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+	.starlight-cooler-credit-aside h2 {
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-h5);
+		font-weight: 600;
+		text-decoration: none !important;
+		line-height: var(--sl-line-height-headings);
+    margin-bottom: 0.5rem;
+	}
+	.starlight-cooler-credit-aside p {
+		font-size: var(--sl-text-xs);
+		line-height: normal;
+		text-decoration: none !important;
+		color: var(--sl-color-gray-3);
+		overflow-wrap: anywhere;
+	}
+	.starlight-cooler-credit-aside > a > div > div:last-child {
+		display: flex;
+		align-items: end;
+	}
+	.starlight-cooler-credit-aside img {
+		margin-bottom: -1rem;
+		transition: transform 0.3s;
+		transform: translateY(2px);
+		width: 5.5rem;
+		height: auto;
+	}
+	.starlight-cooler-credit-aside:hover img {
+		transform: translateY(0px);
+	}
+</style>

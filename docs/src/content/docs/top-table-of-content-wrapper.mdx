@@ -1,0 +1,47 @@
+---
+title: Top Table of Content Wrapper
+---
+
+If you want to display something entirely different at the top of the Table of Content, you can use the `TopTableOfContentWrapper` component. This component is a wrapper around the default Table of Content and allows you to display additional content above the default Table of Content.
+
+import { Steps } from '@astrojs/starlight/components';
+
+Here is an example:
+
+<Steps>
+
+1. Create the component `TableOfContents.astro`:
+
+    ```astro title="src/components/TableOfContents.astro"
+    ---
+    import Default from '@astrojs/starlight/components/TableOfContents.astro'
+    import TopTableOfContentWrapper from 'starlight-cooler-credit/components/TopTableOfContentWrapper.astro'
+    ---
+
+    <TopTableOfContentWrapper>
+      <p>✨ Reaching for the stars! ✨</p>
+    </TopTableOfContentWrapper>
+    <Default><slot /></Default>
+    ```
+
+    :::note
+    The `TopTableOfContentWrapper` component should be placed above the default Table of Content!
+    :::
+
+2. Override the default Table of Content in your `astro.config.mjs`:
+
+    ```js title="astro.config.mjs" {5}
+    export default defineConfig({
+      integrations: [
+        starlight({
+          components: {
+            TableOfContents: "./src/components/TableOfContents.astro",
+          },
+        }),
+      ],
+    });
+    ```
+
+</Steps>
+
+You can see the result in the right Table of Content ➡️
