@@ -74,16 +74,9 @@ starlightCoolerCredit({
 
 The `Astro`, `Starlight`, and `Starlight Blog` options are preconfigured and can be used without any additional configuration.
 
-import LanguagesList from "../../components/LanguagesList.astro";
-import TranslationsList from "../../components/TranslationsList.astro";
+import { I18n } from '@hideoo/starlight-plugins-docs-components'
 
-<LanguagesList startsSentence /> translated UI strings are provided out of the box.
-
-To provide translations for additional languages you support — or override the default ones — check the [“Translate Starlight’s UI”](https://starlight.astro.build/guides/i18n/#translate-starlights-ui) guide in the Starlight documentation.
-
-These are the English defaults of the existing strings Starlight Cooler Credit ships with:
-
-<TranslationsList />
+<I18n label="Starlight Cooler Credit" translations={import('../../../../packages/starlight-cooler-credit/translations')} />
 
 ### `showImage`
 

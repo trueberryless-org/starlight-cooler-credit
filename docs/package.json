@@ -30,6 +30,7 @@
   "dependencies": {
     "@astrojs/node": "^9.1.0",
     "@astrojs/starlight": "^0.32.0",
+    "@hideoo/starlight-plugins-docs-components": "^0.4.0",
     "@trueberryless-org/starlight-plugins-docs-components": "^0.4.0",
     "astro": "^5.3.0",
     "sharp": "^0.33.5",
