@@ -1,4 +1,7 @@
 import starlightConfig from "virtual:starlight/user-config";
+import { Translations } from "../translations";
+import { i18nSchema } from "@astrojs/starlight/schema";
+import type { z } from "astro/zod";
 
 export const DefaultLocale =
   starlightConfig.defaultLocale.locale === "root"
@@ -15,3 +18,8 @@ export function getLangFromLocale(locale: Locale): string {
 }
 
 export type Locale = string | undefined;
+
+type CustomKeys = keyof typeof Translations.en;
+type StarlightKeys = keyof z.infer<ReturnType<typeof i18nSchema>>;
+
+export type TranslationKey = CustomKeys | StarlightKeys;

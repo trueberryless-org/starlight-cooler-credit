@@ -1,12 +1,12 @@
 import starlightConfig from "virtual:starlight/user-config";
 import type { StarlightCoolerCreditConfig } from "./config";
-import { getLangFromLocale, type Locale } from "./i18n";
+import { getLangFromLocale, type Locale, type TranslationKey } from "./i18n";
 import { kebabCase } from "change-case";
 
 export default function getCreditText(
   config: StarlightCoolerCreditConfig,
   type: "title" | "href" | "description",
-  translate: (key: any) => string,
+  translate: (key: TranslationKey) => string,
   locale: Locale
 ): string | undefined {
   if (typeof config.credit === "string") {
@@ -40,10 +40,13 @@ export default function getCreditText(
       starlightConfig.defaultLocale.lang ??
       starlightConfig.defaultLocale.locale;
 
-    if (config.credit[type][lang]) {
+    if (config.credit[type] && config.credit[type][lang]) {
       text = config.credit[type][lang];
     } else {
-      text = defaultLang ? config.credit[type][defaultLang] ?? "" : "";
+      text =
+        defaultLang && config.credit[type]
+          ? config.credit[type][defaultLang] ?? ""
+          : "";
     }
 
     if (text.length === 0) {

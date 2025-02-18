@@ -3,10 +3,12 @@ import { Image } from 'astro:assets';
 import HoustonOmg from '../assets/houston_omg.png';
 import config from "virtual:starlight-cooler-credit-config";
 import getCreditText from '../libs/util';
+import type { TranslationKey } from '../libs/i18n';
+
 
 const { class: className, ...rest } = Astro.props;
 
-const translate = (key: string) => Astro.locals.t(key);
+const translate = (key: TranslationKey) => Astro.locals.t(key) as string;
 
 const locale = Astro.currentLocale
 
@@ -46,9 +48,9 @@ const alt = config.customImageAlt ? config.customImageAlt : houstenOmgAlt;
 		box-shadow: var(--sl-shadow-md);
 		overflow-y: hidden;
 	}
-  .starlight-cooler-credit-aside a:link{
-    text-decoration: none !important;
-  }
+	.starlight-cooler-credit-aside a:link{
+		text-decoration: none !important;
+	}
 	.starlight-cooler-credit-aside a::before {
 		content: '';
 		position: absolute;
@@ -66,7 +68,7 @@ const alt = config.customImageAlt ? config.customImageAlt : houstenOmgAlt;
 		font-weight: 600;
 		text-decoration: none !important;
 		line-height: var(--sl-line-height-headings);
-    margin-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
 	}
 	.starlight-cooler-credit-aside p {
 		font-size: var(--sl-text-xs);
