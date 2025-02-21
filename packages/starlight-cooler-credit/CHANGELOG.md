@@ -1,5 +1,11 @@
 # starlight-cooler-credit
 
+## 0.3.1
+
+### Patch Changes
+
+- [`50153b0`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/50153b02563c1f23e683bf6900f4b7d2e8071a70) Thanks [@trueberryless](https://github.com/trueberryless)! - Small fixes in docs and throw Warnings
+
 ## 0.3.0
 
 ### Minor Changes
