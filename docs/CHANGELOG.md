@@ -1,5 +1,18 @@
 # starlight-cooler-credit-docs
 
+## 0.2.5
+
+### Patch Changes
+
+- [`8aab573`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/8aab573111fd1032a5403c1b8c287e52dc1a6503) Thanks [@trueberryless](https://github.com/trueberryless)! - Fix import statements in configuration examples
+
+- [#60](https://github.com/trueberryless-org/starlight-cooler-credit/pull/60) [`e9995e0`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/e9995e0f50bec1cdbc121899769219b62ee57223) Thanks [@trueberryless](https://github.com/trueberryless)! - Add Demo with many headings in order to test the CSS when ToC is larger
+
+- [#60](https://github.com/trueberryless-org/starlight-cooler-credit/pull/60) [`e9995e0`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/e9995e0f50bec1cdbc121899769219b62ee57223) Thanks [@trueberryless](https://github.com/trueberryless)! - Document component exports
+
+- Updated dependencies [[`e9995e0`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/e9995e0f50bec1cdbc121899769219b62ee57223), [`e9995e0`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/e9995e0f50bec1cdbc121899769219b62ee57223), [`6e77f96`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/6e77f96ab4ce84d069f1ba3eed4f7c9c541a4093)]:
+  - starlight-cooler-credit@0.3.0
+
 ## 0.2.4
 
 ### Patch Changes
