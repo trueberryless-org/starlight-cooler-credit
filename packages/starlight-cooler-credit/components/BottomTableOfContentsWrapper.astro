@@ -5,7 +5,8 @@ const { toc } = Astro.locals.starlightRoute;
 {
 	toc && (
 		<>
-			<div class="starlight-cooler-credit-bottom-table-of-content-wrapper-container">
+			<div class="starlight-cooler-credit-spacer" />
+			<div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
 				<slot />
 			</div>
 		</>
@@ -13,7 +14,10 @@ const { toc } = Astro.locals.starlightRoute;
 }
 
 <style>
-	.starlight-cooler-credit-bottom-table-of-content-wrapper-container {
+	.starlight-cooler-credit-spacer {
+		flex-grow: 1;
+	}
+	.starlight-cooler-credit-bottom-table-of-contents-wrapper-container {
 		margin-top: 1rem;
 	}
 </style>
@@ -27,7 +31,7 @@ const { toc } = Astro.locals.starlightRoute;
 	.sl-container {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		/* justify-content: space-between; */
 		flex: 1;
 	}
 </style>

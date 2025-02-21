@@ -23,10 +23,10 @@
   "exports": {
     ".": "./index.ts",
     "./overrides/TableOfContents.astro": "./overrides/TableOfContents.astro",
-    "./components/TableOfContents.astro": "./components/starlight/TableOfContents.astro",
-    "./components/BottomTableOfContentWrapper.astro": "./components/BottomTableOfContentWrapper.astro",
+    "./components/BottomTableOfContentsWrapper.astro": "./components/BottomTableOfContentsWrapper.astro",
     "./components/CreditReferenceCard.astro": "./components/CreditReferenceCard.astro",
-    "./components/TopTableOfContentWrapper.astro": "./components/TopTableOfContentWrapper.astro",
+    "./components/DefaultBottomTableOfContentsWrapper.astro": "./components/DefaultBottomTableOfContentsWrapper.astro",
+    "./components/TopTableOfContentsWrapper.astro": "./components/TopTableOfContentsWrapper.astro",
     "./package.json": "./package.json"
   },
   "dependencies": {

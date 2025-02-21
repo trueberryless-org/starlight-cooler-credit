@@ -65,8 +65,9 @@ export default defineConfig({
           label: "Components",
           items: [
             { slug: "credit-reference-card" },
-            { slug: "bottom-table-of-content-wrapper" },
-            { slug: "top-table-of-content-wrapper" },
+            { slug: "top-table-of-contents-wrapper" },
+            { slug: "bottom-table-of-contents-wrapper" },
+            { slug: "top-and-bottom-table-of-contents-wrapper" },
           ],
         },
       ],

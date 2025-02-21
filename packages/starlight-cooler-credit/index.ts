@@ -1,8 +1,5 @@
-import type {
-  StarlightPlugin,
-  StarlightUserConfig,
-} from "@astrojs/starlight/types";
-import type { AstroIntegrationLogger } from "astro";
+import type { StarlightPlugin } from "@astrojs/starlight/types";
+
 import { Translations } from "./translations";
 import {
   type StarlightCoolerCreditConfig,
@@ -10,6 +7,7 @@ import {
   type StarlightCoolerCreditUserConfig,
 } from "./libs/config";
 import { vitePluginStarlightCoolerCreditConfig } from "./libs/vite";
+import { overrideStarlightComponent } from "./libs/starlight";
 
 export type { StarlightCoolerCreditConfig, StarlightCoolerCreditUserConfig };
 
@@ -36,7 +34,8 @@ export default function starlightCoolerCredit(
             ...overrideStarlightComponent(
               starlightConfig.components,
               logger,
-              "TableOfContents"
+              "TableOfContents",
+              "DefaultBottomTableOfContentsWrapper"
             ),
           },
         });
@@ -55,26 +54,5 @@ export default function starlightCoolerCredit(
         });
       },
     },
-  };
-}
-
-function overrideStarlightComponent(
-  components: StarlightUserConfig["components"],
-  logger: AstroIntegrationLogger,
-  component: keyof NonNullable<StarlightUserConfig["components"]>
-) {
-  if (components?.[component]) {
-    logger.warn(
-      `It looks like you already have a \`${component}\` component override in your Starlight configuration.`
-    );
-    logger.warn(
-      `To use \`starlight-cooler-credit\`, either remove your override or update it to render the content from \`starlight-cooler-credit/components/${component}.astro\`.`
-    );
-
-    return {};
-  }
-
-  return {
-    [component]: `starlight-cooler-credit/overrides/${component}.astro`,
   };
 }

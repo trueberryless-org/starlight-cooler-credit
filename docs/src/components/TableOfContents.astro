@@ -1,35 +1,34 @@
 ---
 import Default from '@astrojs/starlight/components/TableOfContents.astro'
-import BottomTableOfContentWrapper from 'starlight-cooler-credit/components/BottomTableOfContentWrapper.astro'
-import TopTableOfContentWrapper from 'starlight-cooler-credit/components/TopTableOfContentWrapper.astro'
-import StarlightCoolerCreditTableOfContents from 'starlight-cooler-credit/components/TableOfContents.astro'
+import BottomTableOfContentsWrapper from 'starlight-cooler-credit/components/BottomTableOfContentsWrapper.astro'
+import TopTableOfContentsWrapper from 'starlight-cooler-credit/components/TopTableOfContentsWrapper.astro'
+import DefaultBottomTableOfContentsWrapper from 'starlight-cooler-credit/components/DefaultBottomTableOfContentsWrapper.astro'
 
 const currentPath = Astro.url.pathname;
-const showBottomTable = currentPath.includes('bottom-table-of-content-wrapper');
-const showTopTable = currentPath.includes('top-table-of-content-wrapper');
+const showBothTable = currentPath.includes('top-and-bottom-table-of-contents-wrapper');
+const showBottomTable = currentPath.includes('bottom-table-of-contents-wrapper');
+const showTopTable = currentPath.includes('top-table-of-contents-wrapper');
 ---
 
-{showBottomTable ? (
-  <Default><slot /></Default>
-  <BottomTableOfContentWrapper>
-    <p>Hello, Astronaut! 👨‍🚀</p>
-  </BottomTableOfContentWrapper>
-) : showTopTable ? (
-  <TopTableOfContentWrapper>
+{showBothTable ? (
+  <TopTableOfContentsWrapper>
     <p>✨ Reaching for the stars! ✨</p>
-  </TopTableOfContentWrapper>
+  </TopTableOfContentsWrapper>
   <Default><slot /></Default>
-
-  <style is:global>
-    .right-sidebar-panel {
-      min-height: 100%;
-      display: block;
-    }
-    .sl-container {
-      display: block;
-    }
-  </style>
+  <BottomTableOfContentsWrapper>
+    <p>Hello, Astronaut! 👨‍🚀</p>
+  </BottomTableOfContentsWrapper>
+) : showBottomTable ? (
+  <Default><slot /></Default>
+  <BottomTableOfContentsWrapper>
+    <p>Hello, Astronaut! 👨‍🚀</p>
+  </BottomTableOfContentsWrapper>
+) : showTopTable ? (
+  <TopTableOfContentsWrapper>
+    <p>✨ Reaching for the stars! ✨</p>
+  </TopTableOfContentsWrapper>
+  <Default><slot /></Default>
 ) : (
   <Default><slot /></Default>
-  <StarlightCoolerCreditTableOfContents />
+  <DefaultBottomTableOfContentsWrapper />
 )}
