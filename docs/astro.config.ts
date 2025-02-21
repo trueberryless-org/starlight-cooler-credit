@@ -5,6 +5,8 @@ import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
 import starlightPluginShowLatestVersion from "starlight-plugin-show-latest-version";
 
+import node from "@astrojs/node";
+
 export default defineConfig({
   integrations: [
     starlight({
@@ -20,16 +22,6 @@ export default defineConfig({
       editLink: {
         baseUrl:
           "https://github.com/trueberryless-org/starlight-cooler-credit/edit/main/docs/",
-      },
-      locales: {
-        root: {
-          lang: "en",
-          label: "English",
-        },
-        de: {
-          lang: "de",
-          label: "Deutsch",
-        },
       },
       plugins: [
         starlightLinksValidator(),
@@ -47,16 +39,36 @@ export default defineConfig({
           },
         }),
         starlightPluginShowLatestVersion({
-          repo: "trueberryless-org/starlight-cooler-credit",
+          source: {
+            type: "npm",
+            slug: "starlight-cooler-credit",
+          },
+          showInSiteTitle: "deferred",
         }),
       ],
+      components: {
+        TableOfContents: "./src/components/TableOfContents.astro",
+      },
       sidebar: [
         {
           label: "Start Here",
           translations: {
             de: "Loslegen",
           },
-          items: [{ slug: "getting-started" }, { slug: "configuration" }],
+          items: [
+            { slug: "getting-started" },
+            { slug: "configuration" },
+            { slug: "many-headings" },
+          ],
+        },
+        {
+          label: "Components",
+          items: [
+            { slug: "credit-reference-card" },
+            { slug: "top-table-of-contents-wrapper" },
+            { slug: "bottom-table-of-contents-wrapper" },
+            { slug: "top-and-bottom-table-of-contents-wrapper" },
+          ],
         },
       ],
       social: {
@@ -64,4 +76,7 @@ export default defineConfig({
       },
     }),
   ],
+  adapter: node({
+    mode: "standalone",
+  }),
 });

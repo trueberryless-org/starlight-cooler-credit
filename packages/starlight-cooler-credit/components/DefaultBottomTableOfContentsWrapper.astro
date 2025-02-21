@@ -1,0 +1,16 @@
+---
+import BottomTableOfContentsWrapper from './BottomTableOfContentsWrapper.astro';
+import CreditReferenceCard from './CreditReferenceCard.astro';
+
+const { toc } = Astro.locals.starlightRoute;
+---
+
+{
+	toc && (
+		<>
+			<BottomTableOfContentsWrapper>
+				<CreditReferenceCard />
+			</BottomTableOfContentsWrapper>
+		</>
+	)
+}

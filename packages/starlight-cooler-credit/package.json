@@ -22,18 +22,22 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
-    "./overrides/PageSidebar.astro": "./overrides/PageSidebar.astro",
+    "./overrides/TableOfContents.astro": "./overrides/TableOfContents.astro",
+    "./components/BottomTableOfContentsWrapper.astro": "./components/BottomTableOfContentsWrapper.astro",
+    "./components/CreditReferenceCard.astro": "./components/CreditReferenceCard.astro",
+    "./components/DefaultBottomTableOfContentsWrapper.astro": "./components/DefaultBottomTableOfContentsWrapper.astro",
+    "./components/TopTableOfContentsWrapper.astro": "./components/TopTableOfContentsWrapper.astro",
     "./package.json": "./package.json"
   },
   "dependencies": {
     "change-case": "^5.4.4"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.30.3",
-    "astro": "^5.1.0"
+    "@astrojs/starlight": "^0.32.0",
+    "astro": "^5.3.0"
   },
   "peerDependencies": {
-    "@astrojs/starlight": ">=0.30"
+    "@astrojs/starlight": ">=0.32"
   },
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
