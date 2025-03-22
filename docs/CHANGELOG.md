@@ -1,5 +1,11 @@
 # starlight-cooler-credit-docs
 
+## 0.2.7
+
+### Patch Changes
+
+- [#65](https://github.com/trueberryless-org/starlight-cooler-credit/pull/65) [`03b473c`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/03b473c3e12c46f71d3b035102250df8d5c174b6) Thanks [@trueberryless](https://github.com/trueberryless)! - Netlify
+
 ## 0.2.6
 
 ### Patch Changes
