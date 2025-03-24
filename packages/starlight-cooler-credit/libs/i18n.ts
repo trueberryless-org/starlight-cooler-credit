@@ -1,7 +1,8 @@
-import starlightConfig from "virtual:starlight/user-config";
-import { Translations } from "../translations";
 import { i18nSchema } from "@astrojs/starlight/schema";
 import type { z } from "astro/zod";
+import starlightConfig from "virtual:starlight/user-config";
+
+import { Translations } from "../translations";
 
 export const DefaultLocale =
   starlightConfig.defaultLocale.locale === "root"

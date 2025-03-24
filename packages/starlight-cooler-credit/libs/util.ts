@@ -1,7 +1,8 @@
-import starlightConfig from "virtual:starlight/user-config";
-import type { StarlightCoolerCreditConfig } from "./config";
-import { getLangFromLocale, type Locale, type TranslationKey } from "./i18n";
 import { kebabCase } from "change-case";
+import starlightConfig from "virtual:starlight/user-config";
+
+import type { StarlightCoolerCreditConfig } from "./config";
+import { type Locale, type TranslationKey, getLangFromLocale } from "./i18n";
 
 export default function getCreditText(
   config: StarlightCoolerCreditConfig,
@@ -45,7 +46,7 @@ export default function getCreditText(
     } else {
       text =
         defaultLang && config.credit[type]
-          ? config.credit[type][defaultLang] ?? ""
+          ? (config.credit[type][defaultLang] ?? "")
           : "";
     }
 

@@ -1,13 +1,13 @@
 import type { StarlightPlugin } from "@astrojs/starlight/types";
 
-import { Translations } from "./translations";
 import {
   type StarlightCoolerCreditConfig,
-  validateConfig,
   type StarlightCoolerCreditUserConfig,
+  validateConfig,
 } from "./libs/config";
-import { vitePluginStarlightCoolerCreditConfig } from "./libs/vite";
 import { overrideStarlightComponent } from "./libs/starlight";
+import { vitePluginStarlightCoolerCreditConfig } from "./libs/vite";
+import { Translations } from "./translations";
 
 export type { StarlightCoolerCreditConfig, StarlightCoolerCreditUserConfig };
 

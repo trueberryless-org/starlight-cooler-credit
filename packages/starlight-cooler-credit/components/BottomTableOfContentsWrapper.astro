@@ -3,35 +3,35 @@ const { toc } = Astro.locals.starlightRoute;
 ---
 
 {
-	toc && (
-		<>
-			<div class="starlight-cooler-credit-spacer" />
-			<div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
-				<slot />
-			</div>
-		</>
-	)
+  toc && (
+    <>
+      <div class="starlight-cooler-credit-spacer" />
+      <div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
+        <slot />
+      </div>
+    </>
+  )
 }
 
 <style>
-	.starlight-cooler-credit-spacer {
-		flex-grow: 1;
-	}
-	.starlight-cooler-credit-bottom-table-of-contents-wrapper-container {
-		margin-top: 1rem;
-	}
+  .starlight-cooler-credit-spacer {
+    flex-grow: 1;
+  }
+  .starlight-cooler-credit-bottom-table-of-contents-wrapper-container {
+    margin-top: 1rem;
+  }
 </style>
 
 <style is:global>
-	.right-sidebar-panel {
-		min-height: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-	.sl-container {
-		display: flex;
-		flex-direction: column;
-		/* justify-content: space-between; */
-		flex: 1;
-	}
+  .right-sidebar-panel {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sl-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    flex: 1;
+  }
 </style>

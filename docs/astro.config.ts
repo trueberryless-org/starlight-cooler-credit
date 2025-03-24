@@ -1,8 +1,8 @@
 import starlight from "@astrojs/starlight";
-import { defineConfig } from "astro/config";
-import starlightLinksValidator from "starlight-links-validator";
-import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
+import { defineConfig } from "astro/config";
+import starlightCoolerCredit from "starlight-cooler-credit";
+import starlightLinksValidator from "starlight-links-validator";
 
 export default defineConfig({
   integrations: [

@@ -3,27 +3,27 @@ const { toc } = Astro.locals.starlightRoute;
 ---
 
 {
-	toc && (
-		<>
-			<div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
-				<slot />
-			</div>
-		</>
-	)
+  toc && (
+    <>
+      <div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
+        <slot />
+      </div>
+    </>
+  )
 }
 
 <style>
-	.starlight-cooler-credit-bottom-table-of-contents-wrapper-container {
-		margin-bottom: 1rem;
-	}
+  .starlight-cooler-credit-bottom-table-of-contents-wrapper-container {
+    margin-bottom: 1rem;
+  }
 </style>
 
 <style is:global>
-	.right-sidebar-panel {
-		min-height: 100%;
-		display: flex;
-	}
-	.sl-container {
-		display: flex;
-	}
+  .right-sidebar-panel {
+    min-height: 100%;
+    display: flex;
+  }
+  .sl-container {
+    display: flex;
+  }
 </style>
