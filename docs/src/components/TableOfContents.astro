@@ -11,24 +11,32 @@ const showTopTable = currentPath.includes('top-table-of-contents-wrapper');
 ---
 
 {showBothTable ? (
-  <TopTableOfContentsWrapper>
-    <p>✨ Reaching for the stars! ✨</p>
-  </TopTableOfContentsWrapper>
-  <Default><slot /></Default>
-  <BottomTableOfContentsWrapper>
-    <p>Hello, Astronaut! 👨‍🚀</p>
-  </BottomTableOfContentsWrapper>
+  <>
+    <TopTableOfContentsWrapper>
+      <p>✨ Reaching for the stars! ✨</p>
+    </TopTableOfContentsWrapper>
+    <Default><slot /></Default>
+    <BottomTableOfContentsWrapper>
+      <p>Hello, Astronaut! 👨‍🚀</p>
+    </BottomTableOfContentsWrapper>
+  </>
 ) : showBottomTable ? (
-  <Default><slot /></Default>
-  <BottomTableOfContentsWrapper>
-    <p>Hello, Astronaut! 👨‍🚀</p>
-  </BottomTableOfContentsWrapper>
+  <>
+    <Default><slot /></Default>
+    <BottomTableOfContentsWrapper>
+      <p>Hello, Astronaut! 👨‍🚀</p>
+    </BottomTableOfContentsWrapper>
+  </>
 ) : showTopTable ? (
-  <TopTableOfContentsWrapper>
-    <p>✨ Reaching for the stars! ✨</p>
-  </TopTableOfContentsWrapper>
-  <Default><slot /></Default>
+  <>
+    <TopTableOfContentsWrapper>
+      <p>✨ Reaching for the stars! ✨</p>
+    </TopTableOfContentsWrapper>
+    <Default><slot /></Default>
+  </>
 ) : (
-  <Default><slot /></Default>
-  <DefaultBottomTableOfContentsWrapper />
+  <>
+    <Default><slot /></Default>
+    <DefaultBottomTableOfContentsWrapper />
+  </>
 )}
