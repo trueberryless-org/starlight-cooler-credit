@@ -31,8 +31,8 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
   </Card>
 </CardGrid>
 
-import { ContributorList } from "starlight-contributor-list";
-
 ## Contributors
 
-<ContributorList githubRepo="trueberryless-org/starlight-cooler-credit" />
+import { ContributorList } from "starlight-contributor-list";
+
+<ContributorList githubRepo="trueberryless-org/starlight-cooler-credit" ignore={["autofix-ci[bot]", "github-actions[bot]", "renovate[bot]"]} />

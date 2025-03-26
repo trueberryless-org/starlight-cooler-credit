@@ -7,6 +7,7 @@ import type { TranslationKey } from "../libs/i18n";
 
 const { class: className, ...rest } = Astro.props;
 
+// @ts-ignore
 const translate = (key: TranslationKey) => Astro.locals.t(key) as string;
 
 const locale = Astro.currentLocale;
@@ -14,6 +15,7 @@ const locale = Astro.currentLocale;
 const houstenOmgAlt =
   "A face with two large white eyes and a small round mouth, creating a 'WOW' expression. This character, named Houston, sticks out at the bottom of the card to show interest.";
 
+// @ts-ignore
 const src = config.customImage ? config.customImage.default : HoustonOmg;
 const alt = config.customImageAlt ? config.customImageAlt : houstenOmgAlt;
 ---
