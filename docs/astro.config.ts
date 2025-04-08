@@ -25,15 +25,6 @@ export default defineConfig({
         starlightCoolerCredit(),
         starlightPluginsDocsComponents({
           pluginName: "starlight-cooler-credit",
-          showcaseProps: {
-            entries: [
-              {
-                thumbnail: "./src/assets/rainsberger.ca.webp",
-                href: "https://www.rainsberger.ca",
-                title: "Sarah Rainsberger",
-              },
-            ],
-          },
         }),
       ],
       components: {
@@ -61,9 +52,13 @@ export default defineConfig({
           ],
         },
       ],
-      social: {
-        github: "https://github.com/trueberryless-org/starlight-cooler-credit",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/trueberryless-org/starlight-cooler-credit",
+        },
+      ],
     }),
   ],
 });
