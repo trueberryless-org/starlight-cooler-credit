@@ -23,15 +23,17 @@ const { toc } = Astro.locals.starlightRoute;
 </style>
 
 <style is:global>
-  .right-sidebar-panel {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .sl-container {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    flex: 1;
+  @media (min-width: 72rem) {
+    .right-sidebar-panel {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-sidebar-panel > .sl-container {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-between; */
+      flex: 1;
+    }
   }
 </style>

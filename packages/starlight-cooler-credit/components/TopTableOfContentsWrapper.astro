@@ -19,11 +19,13 @@ const { toc } = Astro.locals.starlightRoute;
 </style>
 
 <style is:global>
-  .right-sidebar-panel {
-    min-height: 100%;
-    display: flex;
-  }
-  .sl-container {
-    display: flex;
+  @media (min-width: 72rem) {
+    .right-sidebar-panel {
+      min-height: 100%;
+      display: flex;
+    }
+    .right-sidebar-panel > .sl-container {
+      display: flex;
+    }
   }
 </style>
