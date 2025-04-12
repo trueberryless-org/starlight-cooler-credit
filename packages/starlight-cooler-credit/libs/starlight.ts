@@ -4,19 +4,18 @@ import type { AstroIntegrationLogger } from "astro";
 export function overrideStarlightComponent(
   components: StarlightUserConfig["components"],
   logger: AstroIntegrationLogger,
-  override: keyof NonNullable<StarlightUserConfig["components"]>,
-  component: string
+  override: keyof NonNullable<StarlightUserConfig["components"]>
 ) {
   if (components?.[override]) {
     logger.warn(
       `It looks like you already have a \`${override}\` component override in your Starlight configuration.`
     );
     logger.warn(
-      `To use \`starlight-cooler-credit\`, either remove your override or update it to render the content from \`starlight-cooler-credit/components/${component}.astro\`.`
+      `To use \`starlight-cooler-credit\`, either remove your override or update it to render the content from \`starlight-cooler-credit/components/${override}.astro\`.`
     );
-    if (component === "DefaultBottomTableOfContentsWrapper") {
+    if (override === "TableOfContents") {
       logger.warn(
-        "Notice that the `DefaultBottomTableOfContentsWrapper` component must be rendered AFTER the original Starlight `TableOfContents` component in the DOM. This ensures proper layout and behavior within the application."
+        "Notice that the `TableOfContents` component must be rendered AFTER the original Starlight `TableOfContents` component in the DOM. This ensures proper layout and behavior within the application."
       );
     }
 

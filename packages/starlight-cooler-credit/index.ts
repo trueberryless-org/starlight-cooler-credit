@@ -34,8 +34,12 @@ export default function starlightCoolerCredit(
             ...overrideStarlightComponent(
               starlightConfig.components,
               logger,
-              "TableOfContents",
-              "DefaultBottomTableOfContentsWrapper"
+              "TableOfContents"
+            ),
+            ...overrideStarlightComponent(
+              starlightConfig.components,
+              logger,
+              "Pagination"
             ),
           },
         });
