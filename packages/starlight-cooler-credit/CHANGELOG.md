@@ -1,5 +1,15 @@
 # starlight-cooler-credit
 
+## 0.4.0
+
+### Minor Changes
+
+- [#74](https://github.com/trueberryless-org/starlight-cooler-credit/pull/74) [`694417d`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/694417d070bb872eb2feced3c7b853ab3f54a526) Thanks [@trueberryless](https://github.com/trueberryless)! - Add Cooler Credit at the bottom of the page if the Table of Contents is not visible
+
+### Patch Changes
+
+- [#72](https://github.com/trueberryless-org/starlight-cooler-credit/pull/72) [`5ff0132`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/5ff01323065dd5daedf4a37978f7957cd5abd375) Thanks [@trueberryless](https://github.com/trueberryless)! - Fix issue where Table of Contents is visible on mobile devices because of CSS override
+
 ## 0.3.1
 
 ### Patch Changes
