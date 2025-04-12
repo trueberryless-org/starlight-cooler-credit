@@ -73,16 +73,16 @@ The Starlight Cooler Credit plugin behavior can be tweaked using various [config
 
 The Starlight Cooler Credit plugin uses a Starlight [component override](https://starlight.astro.build/guides/overriding-components/) for the [`TableOfContents`](https://starlight.astro.build/reference/overrides/#tableofcontents) component to add the [`CreditReferenceCard`](/credit-reference-card) component to the bottom of the Table of Contents.
 
-If you have a custom `TableOfContents` component override in your Starlight project, you will need to manually render the `DefaultBottomTableOfContentsWrapper` component from the Starlight Cooler Credit plugin in your custom component:
+If you have a custom `TableOfContents` component override in your Starlight project, you will need to manually render the `TableOfContents` component from the Starlight Cooler Credit plugin in your custom component:
 
 ```diff lang="astro"
 ---
 // src/components/overrides/TableOfContents.astro
 import Default from '@astrojs/starlight/components/TableOfContents.astro'
-+import DefaultBottomTableOfContentsWrapper from 'starlight-cooler-credit/components/DefaultBottomTableOfContentsWrapper.astro'
++import StarlightCoolerCreditTableOfContents from 'starlight-cooler-credit/components/TableOfContents.astro'
 ---
 
 <Default><slot /></Default>
 <p>Custom content in the TableOfContents override</p>
-+<DefaultBottomTableOfContentsWrapper />
++<StarlightCoolerCreditTableOfContents />
 ```
