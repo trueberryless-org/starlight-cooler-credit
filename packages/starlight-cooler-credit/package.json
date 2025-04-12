@@ -22,7 +22,10 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
+    "./overrides/Pagination.astro": "./overrides/Pagination.astro",
     "./overrides/TableOfContents.astro": "./overrides/TableOfContents.astro",
+    "./components/Pagination.astro": "./components/starlight/Pagination.astro",
+    "./components/TableOfContents.astro": "./components/starlight/TableOfContents.astro",
     "./components/BottomTableOfContentsWrapper.astro": "./components/BottomTableOfContentsWrapper.astro",
     "./components/CreditReferenceCard.astro": "./components/CreditReferenceCard.astro",
     "./components/DefaultBottomTableOfContentsWrapper.astro": "./components/DefaultBottomTableOfContentsWrapper.astro",
