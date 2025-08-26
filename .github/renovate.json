@@ -11,7 +11,7 @@
   ],
   "rangeStrategy": "bump",
   "ignorePaths": ["**/node_modules/**"],
-  "commitMessageSuffix": "[skip netlify]",
+  "commitMessageSuffix": "[skip ci]",
   "packageRules": [
     {
       "groupName": "github-actions",
