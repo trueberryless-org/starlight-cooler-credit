@@ -1,5 +1,11 @@
 # starlight-cooler-credit
 
+## 0.4.1
+
+### Patch Changes
+
+- [#96](https://github.com/trueberryless-org/starlight-cooler-credit/pull/96) [`46145e7`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/46145e789710e0a7e70b120134a14cc04ddd904a) Thanks [@trueberryless-org](https://github.com/apps/trueberryless-org)! - Setups trusted publishing using OpenID Connect (OIDC) authentication — no code changes.
+
 ## 0.4.0
 
 ### Minor Changes
