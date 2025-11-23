@@ -1,5 +1,41 @@
 ---
-import DefaultBottomTableOfContentsWrapper from "../DefaultBottomTableOfContentsWrapper.astro";
+import CreditReferenceCard from "../CreditReferenceCard.astro";
+
+const { toc } = Astro.locals.starlightRoute;
 ---
 
-<DefaultBottomTableOfContentsWrapper />
+{
+  toc && (
+    <>
+      <div class="starlight-cooler-credit-spacer" />
+      <div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
+        <CreditReferenceCard />
+      </div>
+    </>
+  )
+}
+
+<style>
+  .starlight-cooler-credit-spacer {
+    flex-grow: 1;
+  }
+  .starlight-cooler-credit-bottom-table-of-contents-wrapper-container {
+    margin-top: 1rem;
+  }
+</style>
+
+<style is:global>
+  @media (min-width: 72rem) {
+    .right-sidebar-panel {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-sidebar-panel > .sl-container {
+      display: flex;
+      flex-direction: column;
+      /*justify-content: space-between; Different solution that would not work when custom override */
+      flex: 1;
+    }
+  }
+</style>

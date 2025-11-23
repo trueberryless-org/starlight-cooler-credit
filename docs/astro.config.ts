@@ -7,10 +7,7 @@ import starlightLinksValidator from "starlight-links-validator";
 export default defineConfig({
   integrations: [
     starlight({
-      title: {
-        en: "Starlight Cooler Credit",
-        de: "Starlight Coolere Anerkennung",
-      },
+      title: "Starlight Cooler Credit",
       logo: {
         light: "./src/assets/logo-light.png",
         dark: "./src/assets/logo-dark.png",
@@ -27,15 +24,9 @@ export default defineConfig({
           pluginName: "starlight-cooler-credit",
         }),
       ],
-      components: {
-        TableOfContents: "./src/components/TableOfContents.astro",
-      },
       sidebar: [
         {
           label: "Start Here",
-          translations: {
-            de: "Loslegen",
-          },
           items: [
             { slug: "getting-started" },
             { slug: "configuration" },
@@ -44,12 +35,7 @@ export default defineConfig({
         },
         {
           label: "Components",
-          items: [
-            { slug: "credit-reference-card" },
-            { slug: "top-table-of-contents-wrapper" },
-            { slug: "bottom-table-of-contents-wrapper" },
-            { slug: "top-and-bottom-table-of-contents-wrapper" },
-          ],
+          items: [{ slug: "credit-reference-card" }],
         },
       ],
       social: [
