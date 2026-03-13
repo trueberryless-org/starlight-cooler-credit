@@ -4,13 +4,20 @@ description: Add a nice credit to Starlight or Astro at the bottom of Table of C
 head:
   - tag: title
     content: Starlight Cooler Credit
+  - tag: style
+    content: |
+      .hero-html {
+        --size: 12rem;
+        font-size: var(--size);
+        justify-content: center;
+        line-height: var(--size);
+      }
 template: splash
 editUrl: false
 hero:
   tagline: Add a nice credit to Starlight or Astro at the bottom of Table of Contents.
   image:
-    dark: ../../assets/big-logo-dark.png
-    light: ../../assets/big-logo-light.png
+    html: '😎'
   actions:
     - text: Get Started
       link: /getting-started/

@@ -8,11 +8,6 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Starlight Cooler Credit",
-      logo: {
-        light: "./src/assets/logo-light.png",
-        dark: "./src/assets/logo-dark.png",
-        replacesTitle: true,
-      },
       editLink: {
         baseUrl:
           "https://github.com/trueberryless-org/starlight-cooler-credit/edit/main/docs/",
