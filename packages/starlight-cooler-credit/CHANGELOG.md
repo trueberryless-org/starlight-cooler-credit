@@ -1,5 +1,15 @@
 # starlight-cooler-credit
 
+## 0.6.0
+
+### Minor Changes
+
+- [`51f82f2`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/51f82f276815c8a3cf8fc9be1e57383f52912726) Thanks [@trueberryless](https://github.com/trueberryless)! - Adds support for Astro v6, drops support for Astro v5.
+
+  ⚠️ **BREAKING CHANGE:** The minimum supported version of Starlight is now `0.38.0`.
+
+  Please follow the [upgrade guide](https://github.com/withastro/starlight/releases/tag/%40astrojs%2Fstarlight%400.38.0) to update your project.
+
 ## 0.5.0
 
 ### Minor Changes
