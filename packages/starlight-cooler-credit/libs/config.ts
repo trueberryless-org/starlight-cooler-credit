@@ -21,7 +21,7 @@ const configSchema = z
     message: "customImageAlt is required when customImage is provided.",
     path: ["customImageAlt"],
   })
-  .default({});
+  .prefault({});
 
 export function validateConfig(
   userConfig: unknown
@@ -33,7 +33,7 @@ export function validateConfig(
 
     throw new AstroError(
       `Invalid starlight-cooler-credit configuration:
-      
+
       ${errors.formErrors.map((formError) => ` - ${formError}`).join("\n")}
       ${Object.entries(errors.fieldErrors)
         .map(
