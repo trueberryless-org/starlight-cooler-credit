@@ -10,15 +10,17 @@
     "cool",
     "multilingual"
   ],
-  "homepage": "https://github.com/trueberryless-org/starlight-cooler-credit",
-  "bugs": "https://github.com/trueberryless-org/starlight-cooler-credit/issues",
+  "homepage": "https://starlight-cooler-credit.trueberryless.org",
+  "bugs": {
+    "url": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/trueberryless-org/starlight-cooler-credit.git",
     "directory": "docs"
   },
   "license": "MIT",
-  "author": "trueberryless-org",
+  "author": "trueberryless <trueberryless@gmail.com> (https://trueberryless.org)",
   "type": "module",
   "scripts": {
     "astro": "astro",
