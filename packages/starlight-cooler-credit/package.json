@@ -10,7 +10,7 @@
     "cool",
     "multilingual"
   ],
-  "homepage": "https://starlight-cooler-credit.trueberryless.org",
+  "homepage": "https://starlight-cooler-credit.netlify.app/",
   "bugs": {
     "url": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
   },
@@ -20,7 +20,7 @@
     "directory": "packages/starlight-cooler-credit"
   },
   "license": "MIT",
-  "author": "trueberryless <trueberryless@gmail.com> (https://trueberryless.org)",
+  "author": "trueberryless <trueberryless@gmail.com> (https://felixs.dev)",
   "type": "module",
   "exports": {
     ".": "./index.ts",
