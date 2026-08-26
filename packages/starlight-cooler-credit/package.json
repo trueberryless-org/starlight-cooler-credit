@@ -35,7 +35,7 @@
     "change-case": "^5.4.4"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.41.6",
+    "@astrojs/starlight": "^0.41.7",
     "astro": "^6.4.8"
   },
   "peerDependencies": {
