@@ -42,7 +42,7 @@
     "@astrojs/starlight": ">=0.38"
   },
   "engines": {
-    "node": ">=22.23.2"
+    "node": ">=24.20.0"
   },
   "publishConfig": {
     "access": "public"
