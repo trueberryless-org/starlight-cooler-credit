@@ -4,16 +4,14 @@ import CreditReferenceCard from "../CreditReferenceCard.astro";
 const { toc } = Astro.locals.starlightRoute;
 ---
 
-{
-  toc && (
-    <>
-      <div class="starlight-cooler-credit-spacer" />
-      <div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
-        <CreditReferenceCard />
-      </div>
-    </>
-  )
-}
+{toc && (
+  <>
+    <div class="starlight-cooler-credit-spacer" />
+    <div class="starlight-cooler-credit-bottom-table-of-contents-wrapper-container">
+      <CreditReferenceCard />
+    </div>
+  </>
+)}
 
 <style>
   .starlight-cooler-credit-spacer {

@@ -28,19 +28,15 @@ const alt = config.customImageAlt ? config.customImageAlt : houstenOmgAlt;
     <h2>{getCreditText(config, "title", translate, locale)}</h2>
     <div>
       <div>
-        {
-          getCreditText(config, "description", translate, locale) && (
-            <p>{getCreditText(config, "description", translate, locale)}</p>
-          )
-        }
+        {getCreditText(config, "description", translate, locale) && (
+          <p>{getCreditText(config, "description", translate, locale)}</p>
+        )}
       </div>
-      {
-        config.showImage && (
-          <div>
-            <Image {src} {alt} width="180" />
-          </div>
-        )
-      }
+      {config.showImage && (
+        <div>
+          <Image {src} {alt} width="180" />
+        </div>
+      )}
     </div>
   </a>
 </aside>
