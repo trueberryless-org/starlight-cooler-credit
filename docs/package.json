@@ -30,14 +30,14 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.41.4",
+    "@astrojs/starlight": "^0.42.0",
     "@hideoo/starlight-plugins-docs-components": "^0.4.2",
     "@trueberryless-org/starlight-plugins-docs-components": "^0.6.0",
     "astro": "^6.4.8",
     "sharp": "^0.35.3",
     "starlight-contributor-list": "^0.4.0",
     "starlight-cooler-credit": "workspace:*",
-    "starlight-links-validator": "^0.25.2"
+    "starlight-links-validator": "^0.26.0"
   },
   "packageManager": "pnpm@11.1.2",
   "engines": {
