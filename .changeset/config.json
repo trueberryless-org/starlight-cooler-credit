@@ -8,7 +8,5 @@
   "fixed": [],
   "linked": [],
   "access": "public",
-  "baseBranch": "main",
-  "updateInternalDependencies": "patch",
-  "ignore": ["starlight-cooler-credit-docs"]
+  "updateInternalDependencies": "patch"
 }
