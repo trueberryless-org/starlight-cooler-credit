@@ -1,26 +1,10 @@
 {
   "name": "starlight-cooler-credit-docs",
   "version": "0.2.7",
-  "description": "Add a nice credit to Starlight or Astro at the bottom of Table of Contents.",
-  "keywords": [
-    "starlight",
-    "docs",
-    "astro",
-    "credit",
-    "cool",
-    "multilingual"
-  ],
-  "homepage": "https://starlight-cooler-credit.netlify.app/",
-  "bugs": {
-    "url": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/trueberryless-org/starlight-cooler-credit.git",
-    "directory": "docs"
-  },
   "license": "MIT",
+  "description": "Documentation for the Starlight Cooler Credit plugin.",
   "author": "trueberryless <trueberryless@gmail.com> (https://felixs.dev)",
+  "private": true,
   "type": "module",
   "scripts": {
     "astro": "astro",
@@ -30,17 +14,23 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.42.0",
-    "@hideoo/starlight-plugins-docs-components": "^0.4.2",
+    "@astrojs/starlight": "^0.42.4",
+    "@hideoo/starlight-plugins-docs-components": "^0.5.0",
     "@trueberryless-org/starlight-plugins-docs-components": "^0.6.0",
-    "astro": "^6.4.8",
-    "sharp": "^0.35.3",
-    "starlight-contributor-list": "^0.4.0",
+    "astro": "^7.3.5",
+    "astro-contributors": "^0.9.0",
+    "sharp": "^0.35.4",
     "starlight-cooler-credit": "workspace:*",
     "starlight-links-validator": "^0.26.0"
   },
-  "packageManager": "pnpm@11.1.2",
   "engines": {
-    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
-  }
+    "node": ">=22.12.0"
+  },
+  "homepage": "https://starlight-cooler-credit.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trueberryless-org/starlight-cooler-credit.git",
+    "directory": "docs"
+  },
+  "bugs": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
 }

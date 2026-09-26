@@ -67,13 +67,18 @@ import { Steps, Tabs, TabItem } from "@astrojs/starlight/components";
 
 </Steps>
 
-The Starlight Cooler Credit plugin behavior can be tweaked using various [configuration options](/configuration).
+The Starlight Cooler Credit plugin behavior can be tweaked using various [configuration options](/configuration/).
 
 ## Component overrides
 
-The Starlight Cooler Credit plugin uses a Starlight [component override](https://starlight.astro.build/guides/overriding-components/) for the [`TableOfContents`](https://starlight.astro.build/reference/overrides/#tableofcontents) component to add the [`CreditReferenceCard`](/credit-reference-card) component to the bottom of the Table of Contents.
+The Starlight Cooler Credit plugin uses Starlight [component overrides](https://starlight.astro.build/guides/overriding-components/) for the following components:
 
-If you have a custom `TableOfContents` component override in your Starlight project, you will need to manually render the `TableOfContents` component from the Starlight Cooler Credit plugin in your custom component:
+- [`TableOfContents`](https://starlight.astro.build/reference/overrides/#tableofcontents) to add the [`CreditReferenceCard`](/credit-reference-card/) component at the bottom of the table of contents on large viewports.
+- [`Pagination`](https://starlight.astro.build/reference/overrides/#pagination) to add the [`CreditReferenceCard`](/credit-reference-card/) component below the pagination links on smaller viewports where the table of contents sidebar is not visible.
+
+If you have a custom override for one of these components in your Starlight project, you will need to manually render the matching component from the Starlight Cooler Credit plugin in your custom component.
+
+For example, for a custom `TableOfContents` override, render the plugin component _after_ the default Starlight component:
 
 ```diff lang="astro"
 ---

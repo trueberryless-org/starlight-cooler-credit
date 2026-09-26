@@ -1,50 +1,49 @@
 {
   "name": "starlight-cooler-credit",
   "version": "0.6.0",
-  "description": "Add a nice credit to Starlight or Astro at the bottom of Table of Contents.",
-  "keywords": [
-    "starlight",
-    "docs",
-    "astro",
-    "credit",
-    "cool",
-    "multilingual"
-  ],
-  "homepage": "https://starlight-cooler-credit.netlify.app/",
-  "bugs": {
-    "url": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/trueberryless-org/starlight-cooler-credit.git",
-    "directory": "packages/starlight-cooler-credit"
-  },
   "license": "MIT",
+  "description": "Starlight plugin to add a nice credit to Starlight, Astro, or any other project at the bottom of the table of contents.",
   "author": "trueberryless <trueberryless@gmail.com> (https://felixs.dev)",
   "type": "module",
   "exports": {
     ".": "./index.ts",
-    "./overrides/Pagination.astro": "./overrides/Pagination.astro",
-    "./overrides/TableOfContents.astro": "./overrides/TableOfContents.astro",
+    "./components/CreditReferenceCard.astro": "./components/CreditReferenceCard.astro",
     "./components/Pagination.astro": "./components/starlight/Pagination.astro",
     "./components/TableOfContents.astro": "./components/starlight/TableOfContents.astro",
-    "./components/CreditReferenceCard.astro": "./components/CreditReferenceCard.astro",
+    "./overrides/Pagination.astro": "./overrides/Pagination.astro",
+    "./overrides/TableOfContents.astro": "./overrides/TableOfContents.astro",
     "./package.json": "./package.json"
   },
-  "dependencies": {
-    "change-case": "^5.4.4"
-  },
   "devDependencies": {
-    "@astrojs/starlight": "^0.42.0",
-    "astro": "^6.4.8"
+    "@astrojs/starlight": "^0.42.4",
+    "astro": "^7.3.5"
   },
   "peerDependencies": {
-    "@astrojs/starlight": ">=0.38"
+    "@astrojs/starlight": ">=0.42.0"
   },
   "engines": {
-    "node": ">=22.23.2"
+    "node": ">=22.12.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "sideEffects": false,
+  "keywords": [
+    "starlight",
+    "plugin",
+    "credit",
+    "attribution",
+    "table-of-contents",
+    "documentation",
+    "astro",
+    "withastro",
+    "astro-integration"
+  ],
+  "homepage": "https://starlight-cooler-credit.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trueberryless-org/starlight-cooler-credit.git",
+    "directory": "packages/starlight-cooler-credit"
+  },
+  "bugs": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
 }

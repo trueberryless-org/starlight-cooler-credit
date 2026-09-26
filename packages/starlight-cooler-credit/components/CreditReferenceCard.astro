@@ -1,46 +1,30 @@
 ---
 import { Image } from "astro:assets";
-import HoustonOmg from "../assets/houston_omg.png";
-import config from "virtual:starlight-cooler-credit-config";
-import getCreditText from "../libs/util";
-import type { TranslationKey } from "../libs/i18n";
 
-const { class: className, ...rest } = Astro.props;
+import { getCredit } from "../libs/credit";
+import { getCreditImage } from "../libs/image";
 
-// @ts-ignore
-const translate = (key: TranslationKey) => Astro.locals.t(key) as string;
+type Props = astroHTML.JSX.HTMLAttributes;
 
-const locale = Astro.currentLocale;
+const { class: className, ...attrs } = Astro.props;
 
-const houstenOmgAlt =
-  "A face with two large white eyes and a small round mouth, creating a 'WOW' expression. This character, named Houston, sticks out at the bottom of the card to show interest.";
-
-// @ts-ignore
-const src = config.customImage ? config.customImage.default : HoustonOmg;
-const alt = config.customImageAlt ? config.customImageAlt : houstenOmgAlt;
+const credit = getCredit(Astro.locals.t, Astro.currentLocale);
+const image = getCreditImage();
 ---
 
 <aside
-  class={`not-content starlight-cooler-credit-aside ${className ?? ""}`}
-  {...rest}
+  class:list={["not-content", "starlight-cooler-credit-aside", className]}
+  {...attrs}
 >
-  <a href={getCreditText(config, "href", translate, locale)}>
-    <h2>{getCreditText(config, "title", translate, locale)}</h2>
+  <a href={credit.href}>
+    <h2>{credit.title}</h2>
     <div>
-      <div>
-        {
-          getCreditText(config, "description", translate, locale) && (
-            <p>{getCreditText(config, "description", translate, locale)}</p>
-          )
-        }
-      </div>
-      {
-        config.showImage && (
-          <div>
-            <Image {src} {alt} width="180" />
-          </div>
-        )
-      }
+      <div>{credit.description && <p>{credit.description}</p>}</div>
+      {image && (
+        <div>
+          <Image src={image.src} alt={image.alt} width={180} />
+        </div>
+      )}
     </div>
   </a>
 </aside>

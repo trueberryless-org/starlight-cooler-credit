@@ -1,26 +1,44 @@
-import { i18nSchema } from "@astrojs/starlight/schema";
-import type { z } from "astro/zod";
-import starlightConfig from "virtual:starlight/user-config";
+import type { StarlightUserConfig } from "@astrojs/starlight/types";
 
-import { Translations } from "../translations";
+import type { LocalizedText } from "./config";
 
-export const DefaultLocale =
-  starlightConfig.defaultLocale.locale === "root"
-    ? undefined
-    : starlightConfig.defaultLocale.locale;
+const StarlightDefaultLang = "en";
+const RootLocale = "root";
 
-export function getLangFromLocale(locale: Locale): string {
-  const lang = locale
-    ? starlightConfig.locales?.[locale]?.lang
-    : starlightConfig.locales?.root?.lang;
-  const defaultLang =
-    starlightConfig.defaultLocale.lang ?? starlightConfig.defaultLocale.locale;
-  return lang ?? defaultLang ?? "en";
+export function getI18nContext(
+  starlightConfig: Pick<StarlightUserConfig, "defaultLocale" | "locales">
+): StarlightCoolerCreditI18nContext {
+  const defaultLocale = starlightConfig.defaultLocale ?? RootLocale;
+  const defaultLocaleConfig = starlightConfig.locales?.[defaultLocale];
+
+  return {
+    defaultLang:
+      defaultLocaleConfig?.lang ?? getImplicitLocaleLang(defaultLocale),
+  };
 }
 
-export type Locale = string | undefined;
+export function getLangCandidates(
+  context: StarlightCoolerCreditI18nContext,
+  currentLang: string | undefined
+): string[] {
+  return [
+    ...new Set([currentLang ?? context.defaultLang, context.defaultLang]),
+  ];
+}
 
-type CustomKeys = keyof typeof Translations.en;
-type StarlightKeys = keyof z.infer<ReturnType<typeof i18nSchema>>;
+export function getLocalizedText(
+  text: LocalizedText,
+  candidates: string[]
+): string | undefined {
+  if (typeof text === "string") return text;
 
-export type TranslationKey = CustomKeys | StarlightKeys;
+  return candidates.map((candidate) => text[candidate]).find(Boolean);
+}
+
+function getImplicitLocaleLang(locale: string): string {
+  return locale === RootLocale ? StarlightDefaultLang : locale;
+}
+
+export interface StarlightCoolerCreditI18nContext {
+  defaultLang: string;
+}
