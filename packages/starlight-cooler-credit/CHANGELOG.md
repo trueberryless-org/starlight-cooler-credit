@@ -21,7 +21,7 @@
   - `BottomTableOfContentsWrapper.astro`
   - `TopTableOfContentsWrapper.astro`
 
-  Since those components do no longer exist and are not exported anymore, if you were relying on them, migrate your project to implement those features yourself by following this blog post: ["Add Additional Content to Starlight's Table of Contents"](https://blog.trueberryless.org/blog/starlight-customize-toc-additional-content/).
+  Since those components do no longer exist and are not exported anymore, if you were relying on them, migrate your project to implement those features yourself by following this blog post: ["Add Additional Content to Starlight's Table of Contents"](https://desired-state.leaflet.pub/3mpvkbvkhtc2u).
 
   There is also a minimal reproducation on how to achieve this functionality on [GitHub](https://github.com/trueberryless/starlight-customize-toc-additional-content) and [StackBlitz](https://stackblitz.com/github/trueberryless/starlight-customize-toc-additional-content).
 
@@ -61,13 +61,13 @@
 
 - [#60](https://github.com/trueberryless-org/starlight-cooler-credit/pull/60) [`e9995e0`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/e9995e0f50bec1cdbc121899769219b62ee57223) Thanks [@trueberryless](https://github.com/trueberryless)! - Component exports allows user to place and customize everything the plugin offers.
 
-  Read more about this change under [Components](https://starlight-cooler-credit.trueberryless.org/credit-reference-card/).
+  Read more about this change under [Components](https://starlight-cooler-credit.netlify.app/credit-reference-card/).
 
 ### Patch Changes
 
 - [#60](https://github.com/trueberryless-org/starlight-cooler-credit/pull/60) [`6e77f96`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/6e77f96ab4ce84d069f1ba3eed4f7c9c541a4093) Thanks [@trueberryless](https://github.com/trueberryless)! - Add a11y to credit image. If you have set a `customImage` then you are now required to also describe the image by setting `customImageAlt`.
 
-  Read more about the new config [here](https://starlight-cooler-credit.trueberryless.org/configuration/#customimagealt).
+  Read more about the new config [here](https://starlight-cooler-credit.netlify.app/configuration/#customimagealt).
 
 ## 0.2.3
 

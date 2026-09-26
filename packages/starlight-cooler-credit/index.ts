@@ -1,3 +1,4 @@
+/// <reference path="./locals.d.ts" />
 import type { StarlightPlugin } from "@astrojs/starlight/types";
 
 import {
@@ -5,8 +6,8 @@ import {
   type StarlightCoolerCreditUserConfig,
   validateConfig,
 } from "./libs/config";
-import { overrideStarlightComponent } from "./libs/starlight";
-import { vitePluginStarlightCoolerCreditConfig } from "./libs/vite";
+import { getComponentOverrides } from "./libs/starlight";
+import { vitePluginStarlightCoolerCredit } from "./libs/vite";
 import { Translations } from "./translations";
 
 export type { StarlightCoolerCreditConfig, StarlightCoolerCreditUserConfig };
@@ -24,33 +25,31 @@ export default function starlightCoolerCredit(
       },
       "config:setup"({
         addIntegration,
-        updateConfig: updateStarlightConfig,
         config: starlightConfig,
         logger,
+        updateConfig: updateStarlightConfig,
       }) {
         updateStarlightConfig({
-          components: {
-            ...starlightConfig.components,
-            ...overrideStarlightComponent(
-              starlightConfig.components,
-              logger,
-              "TableOfContents"
-            ),
-            ...overrideStarlightComponent(
-              starlightConfig.components,
-              logger,
-              "Pagination"
-            ),
-          },
+          components: getComponentOverrides(
+            starlightConfig.components,
+            logger,
+            ["TableOfContents", "Pagination"]
+          ),
         });
 
         addIntegration({
           name: "starlight-cooler-credit-integration",
           hooks: {
-            "astro:config:setup": ({ updateConfig }) => {
+            "astro:config:setup": ({ config: astroConfig, updateConfig }) => {
               updateConfig({
                 vite: {
-                  plugins: [vitePluginStarlightCoolerCreditConfig(config)],
+                  plugins: [
+                    vitePluginStarlightCoolerCredit(
+                      config,
+                      starlightConfig,
+                      astroConfig
+                    ),
+                  ],
                 },
               });
             },

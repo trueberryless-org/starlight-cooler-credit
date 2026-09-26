@@ -1,12 +1,12 @@
 # `starlight-cooler-credit`
 
-Add a nice credit to Starlight or Astro at the bottom of Table of Contents.
+Starlight plugin to add a nice credit to Starlight, Astro, or any other project at the bottom of the table of contents.
 
 ## Documentation
 
 Want to get started immediately?
 
-Check out the `starlight-cooler-credit` getting started guide.
+Check out the [`starlight-cooler-credit` getting started guide](https://starlight-cooler-credit.netlify.app/getting-started/).
 
 ## License
 

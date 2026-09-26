@@ -1,23 +1,30 @@
-import { AstroError } from "astro/errors";
 import { z } from "astro/zod";
+
+import { throwPluginError } from "./error";
+
+export const creditPresets = ["Astro", "Starlight", "Starlight Blog"] as const;
+
+const localizedTextSchema = z.union([
+  z.string(),
+  z.record(z.string(), z.string()),
+]);
+
+const customCreditSchema = z.object({
+  title: localizedTextSchema,
+  href: z.url(),
+  description: localizedTextSchema.optional(),
+});
 
 const configSchema = z
   .object({
     credit: z
-      .union([
-        z.enum(["Astro", "Starlight", "Starlight Blog"]),
-        z.object({
-          title: z.union([z.string(), z.record(z.string())]),
-          href: z.string().url(),
-          description: z.union([z.string(), z.record(z.string())]).optional(),
-        }),
-      ])
+      .union([z.enum(creditPresets), customCreditSchema])
       .default("Starlight"),
-    showImage: z.boolean().optional().default(true),
+    showImage: z.boolean().default(true),
     customImage: z.string().optional(),
     customImageAlt: z.string().optional(),
   })
-  .refine((data) => !(data.customImage && !data.customImageAlt), {
+  .refine((config) => !config.customImage || !!config.customImageAlt, {
     message: "customImageAlt is required when customImage is provided.",
     path: ["customImageAlt"],
   })
@@ -29,25 +36,18 @@ export function validateConfig(
   const config = configSchema.safeParse(userConfig);
 
   if (!config.success) {
-    const errors = config.error.flatten();
+    throwPluginError(`Invalid starlight-cooler-credit configuration:
 
-    throw new AstroError(
-      `Invalid starlight-cooler-credit configuration:
-
-      ${errors.formErrors.map((formError) => ` - ${formError}`).join("\n")}
-      ${Object.entries(errors.fieldErrors)
-        .map(
-          ([fieldName, fieldErrors]) =>
-            ` - ${fieldName}: ${fieldErrors.join(" - ")}`
-        )
-        .join("\n")}
-        `,
-      `See the error report above for more informations.\n\nIf you believe this is a bug, please file an issue at https://github.com/trueberryless-org/starlight-cooler-credit/issues/new`
-    );
+${z.prettifyError(config.error)}
+`);
   }
 
   return config.data;
 }
+
+export type CreditPreset = (typeof creditPresets)[number];
+export type LocalizedText = z.output<typeof localizedTextSchema>;
+export type CustomCredit = z.output<typeof customCreditSchema>;
 
 export type StarlightCoolerCreditUserConfig = z.input<typeof configSchema>;
 export type StarlightCoolerCreditConfig = z.output<typeof configSchema>;
