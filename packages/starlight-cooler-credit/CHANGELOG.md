@@ -1,5 +1,21 @@
 # starlight-cooler-credit
 
+## 0.7.0
+
+### Minor Changes
+
+- [#148](https://github.com/trueberryless-org/starlight-cooler-credit/pull/148) [`b39f306`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/b39f306c6115e6fc2553cc2084eaf6f29d4bffcf) Thanks [@trueberryless](https://github.com/trueberryless)! - Adds support for Astro v7, drops support for Astro v6.
+  
+  ⚠️ **BREAKING CHANGE:** The minimum supported version of Starlight is now `0.42.0`.
+  
+  Please follow the [upgrade guide](https://github.com/withastro/starlight/releases/tag/%40astrojs%2Fstarlight%400.42.0) to update your project.
+
+### Patch Changes
+
+- [#148](https://github.com/trueberryless-org/starlight-cooler-credit/pull/148) [`b39f306`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/b39f306c6115e6fc2553cc2084eaf6f29d4bffcf) Thanks [@trueberryless](https://github.com/trueberryless)! - Fixes relative `customImage` paths not being resolved consistently by always resolving them from the root of the project.
+
+- [#148](https://github.com/trueberryless-org/starlight-cooler-credit/pull/148) [`b39f306`](https://github.com/trueberryless-org/starlight-cooler-credit/commit/b39f306c6115e6fc2553cc2084eaf6f29d4bffcf) Thanks [@trueberryless](https://github.com/trueberryless)! - Removes the `change-case` dependency and refactors internal logic to small pure functions for improved maintainability.
+
 ## 0.6.0
 
 ### Minor Changes
