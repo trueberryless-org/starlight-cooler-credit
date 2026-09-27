@@ -4,10 +4,33 @@ import { defineConfig } from "astro/config";
 import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightLinksValidator from "starlight-links-validator";
 
+const site =
+  (process.env.CONTEXT === "deploy-preview" ||
+  process.env.CONTEXT === "branch-deploy"
+    ? process.env.DEPLOY_PRIME_URL
+    : process.env.URL) ?? "https://starlight-cooler-credit.netlify.app";
+
 export default defineConfig({
+  site,
   integrations: [
     starlight({
       title: "Starlight Cooler Credit",
+      head: [
+        {
+          tag: "meta",
+          attrs: {
+            property: "og:image",
+            content: new URL("og.png", site).href,
+          },
+        },
+        {
+          tag: "meta",
+          attrs: {
+            property: "og:image:alt",
+            content: "A cool credit for your table of contents.",
+          },
+        },
+      ],
       editLink: {
         baseUrl:
           "https://github.com/trueberryless-org/starlight-cooler-credit/edit/main/docs/",
