@@ -14,6 +14,10 @@ export default defineConfig({
   site,
   integrations: [
     starlight({
+      credits: true,
+      components: {
+        Footer: "./src/components/Footer.astro",
+      },
       title: "Starlight Cooler Credit",
       head: [
         {
