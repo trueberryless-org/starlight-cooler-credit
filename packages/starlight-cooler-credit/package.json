@@ -1,9 +1,30 @@
 {
   "name": "starlight-cooler-credit",
   "version": "0.7.0",
-  "license": "MIT",
   "description": "Starlight plugin to add a nice credit to Starlight, Astro, or any other project at the bottom of the table of contents.",
+  "keywords": [
+    "starlight",
+    "plugin",
+    "credit",
+    "attribution",
+    "table-of-contents",
+    "documentation",
+    "astro",
+    "withastro",
+    "astro-integration"
+  ],
+  "homepage": "https://starlight-cooler-credit.netlify.app/",
+  "bugs": {
+    "url": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trueberryless-org/starlight-cooler-credit.git",
+    "directory": "packages/starlight-cooler-credit"
+  },
+  "license": "MIT",
   "author": "trueberryless <trueberryless@gmail.com> (https://felixs.dev)",
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": "./index.ts",
@@ -26,24 +47,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "sideEffects": false,
-  "keywords": [
-    "starlight",
-    "plugin",
-    "credit",
-    "attribution",
-    "table-of-contents",
-    "documentation",
-    "astro",
-    "withastro",
-    "astro-integration"
-  ],
-  "homepage": "https://starlight-cooler-credit.netlify.app",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trueberryless-org/starlight-cooler-credit.git",
-    "directory": "packages/starlight-cooler-credit"
-  },
-  "bugs": "https://github.com/trueberryless-org/starlight-cooler-credit/issues"
+  }
 }
